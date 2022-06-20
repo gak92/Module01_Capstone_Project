@@ -1,3 +1,6 @@
+@import 'variables';
+
 h1 {
-  color: blue;
+  color: $orange-color;
+	font-family: $cocogoose-font;
 }
