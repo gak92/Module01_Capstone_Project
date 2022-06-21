@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "COCOGOOSE", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 p,
@@ -25,6 +25,7 @@ ul li {
 
 a {
   font-size: 1.6rem;
+  text-decoration: none;
 }
 
 h1,
@@ -59,6 +60,56 @@ h3 {
 }
 
 /* ################  Section Headline ################ */
+.header {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .top-bar {
+    background: #272a31;
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+  }
+  .header .top-bar .container ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+  }
+  .header .top-bar .container ul li {
+    margin-bottom: 0em;
+  }
+  .header .top-bar .container ul li a {
+    color: #fff;
+  }
+  .header .navbar {
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+  }
+  .header .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .navbar .container h1 a {
+    color: #ec5242;
+    font-size: 1.6rem;
+  }
+  .header .navbar .container .nav-items {
+    display: flex;
+    gap: 6em;
+  }
+  .header .navbar .container .nav-items li a {
+    color: #272a31;
+  }
+}
+
+/* ################  Section Headline ################ */
 .headline {
   height: 95vh;
   background: url(../assets/images/main_big.png);
@@ -78,11 +129,16 @@ h3 {
   background-color: #272a31;
   margin-bottom: 0.5em;
 }
+@media screen and (min-width: 768px) {
+  .headline .hamburger {
+    display: none;
+  }
+}
 .headline .hello-coding {
   color: #ec5242;
   font-size: 3rem;
   font-weight: 300;
-  padding-top: 5em;
+  padding-top: 3em;
   display: block;
 }
 .headline h1 {
@@ -168,6 +224,21 @@ h3 {
 .main-program .button-box {
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .main-program .program-boxes {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  .main-program .program-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .main-program .program-box p {
+    text-align: center;
+  }
 }
 .main-program .btn-join {
   background: #ec5242;

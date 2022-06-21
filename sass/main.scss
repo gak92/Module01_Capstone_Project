@@ -1,5 +1,11 @@
 @import 'variables';
 
+@mixin desktop-media-query {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +18,7 @@ html {
 }
 
 body {
-  font-family: $cocogoose-font;
+  font-family: $lato-font;
 }
 
 p,
@@ -29,6 +35,7 @@ ul {
 
 a {
   font-size: 1.6rem;
+  text-decoration: none;
 }
 
 h1,
@@ -63,6 +70,69 @@ h3 {
 }
 
 /* ################  Section Headline ################ */
+.header {
+  display: none;
+
+  @include desktop-media-query {
+    display: flex;
+    flex-direction: column;
+
+    .top-bar {
+      background: $black-color;
+      min-height: 5vh;
+      display: flex;
+      align-items: center;
+      
+      .container {
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 2em;
+          
+          li {
+            margin-bottom: 0em;
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .navbar {
+      min-height: 8vh;
+      display: flex;
+      align-items: center;
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+          a {
+            color: $orange-color;
+            font-size: 1.6rem;
+          }
+        }
+
+        .nav-items {
+          display: flex;
+          gap: 6em;
+
+          li{
+            a{
+              color: $black-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ################  Section Headline ################ */
 
 .headline {
   height: 95vh;
@@ -83,13 +153,17 @@ h3 {
       background-color: $black-color;
       margin-bottom: 0.5em;
     }
+
+    @include desktop-media-query {
+      display: none;
+    }
   }
 
   .hello-coding {
     color: $orange-color;
     font-size: 3rem;
     font-weight: 300;
-    padding-top: 5em;
+    padding-top: 3em;
     display: block;
   }
 
@@ -191,6 +265,24 @@ h3 {
   .button-box {
     display: flex;
     justify-content: center;
+  }
+
+  @include desktop-media-query {
+    .program-boxes {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+    }
+
+    .program-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+
+      p {
+        text-align: center;
+      }
+    }
   }
 
   .btn-join {
