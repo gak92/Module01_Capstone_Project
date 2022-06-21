@@ -13,18 +13,18 @@ body {
   font-family: "COCOGOOSE", sans-serif;
 }
 
+p,
+li {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+}
+
 ul li {
   list-style-type: none;
 }
 
 a {
   font-size: 1.6rem;
-}
-
-p,
-li {
-  font-size: 1.6rem;
-  margin-bottom: 0.5em;
 }
 
 h1,
@@ -125,7 +125,6 @@ h3 {
 
 /* ################  Section Main Program ################ */
 .main-program {
-  background-color: #272a31;
   background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)), url(../assets/images/pattern_bg.png);
   background-position: center;
   padding-bottom: 3em;
@@ -178,6 +177,38 @@ h3 {
   padding: 2em 3em;
   font-size: 2rem;
   font-weight: 600;
+}
+
+/* ################  Section About Logo ################ */
+.about-logo {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.about-logo .about-logo-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #272a31;
+}
+.about-logo p {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/* ################  Section Past Summit ################ */
+.past-summit h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.past-summit p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.past-summit .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3em;
+  padding: 3em 3em 5em 3em;
 }
 
 /* ################  Section Featured Speakers ################ */
@@ -268,38 +299,6 @@ h3 {
 .footer .footer-box .right {
   color: #595959;
   font-size: 1.5rem;
-}
-
-/* ################  Section About Logo ################ */
-.about-logo {
-  padding-top: 5em;
-  padding-bottom: 5em;
-}
-.about-logo .about-logo-heading {
-  text-align: center;
-  font-size: 2rem;
-  color: #272a31;
-}
-.about-logo p {
-  text-align: center;
-  margin-bottom: 2em;
-}
-
-/* ################  Section Past Summit ################ */
-.past-summit h2 {
-  text-align: center;
-  font-size: 2rem;
-}
-.past-summit p {
-  text-align: center;
-  font-size: 1.6rem;
-}
-.past-summit .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3em;
-  padding: 3em 3em 5em 3em;
 }
 
 /*# sourceMappingURL=main.css.map */

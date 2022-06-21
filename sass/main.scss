@@ -15,6 +15,12 @@ body {
   font-family: $cocogoose-font;
 }
 
+p,
+li {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+}
+
 ul {
   li {
     list-style-type: none;
@@ -23,12 +29,6 @@ ul {
 
 a {
   font-size: 1.6rem;
-}
-
-p,
-li {
-  font-size: 1.6rem;
-  margin-bottom: 0.5em;
 }
 
 h1,
@@ -140,7 +140,6 @@ h3 {
 /* ################  Section Main Program ################ */
 
 .main-program {
-  background-color: $black-color;
   background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)),
     url(../assets/images/pattern_bg.png);
   background-position: center;
@@ -205,6 +204,44 @@ h3 {
   }
 }
 
+/* ################  Section About Logo ################ */
+.about-logo {
+  padding-top: 5em;
+  padding-bottom: 5em;
+
+  .about-logo-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: $black-color;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 2em;
+  }
+}
+
+/* ################  Section Past Summit ################ */
+.past-summit {
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+    padding: 3em 3em 5em 3em;
+  }
+}
+
 /* ################  Section Featured Speakers ################ */
 .speaker {
   h2 {
@@ -227,6 +264,7 @@ h3 {
 
       .text-box {
         font-family: $lato-font;
+
         h3 {
           color: $black-color;
           font-size: 2rem;
@@ -308,43 +346,3 @@ h3 {
     }
   }
 }
-
-/* ################  Section About Logo ################ */
-.about-logo {
-  padding-top: 5em;
-  padding-bottom: 5em;
-
-  .about-logo-heading {
-    text-align: center;
-    font-size: 2rem;
-    color: $black-color;
-  }
-
-  p {
-    text-align: center;
-    margin-bottom: 2em;
-  }
-}
-
-/* ################  Section Past Summit ################ */
-.past-summit {
-
-  h2 {
-    text-align: center;
-    font-size: 2rem;
-  }
-
-  p {
-    text-align: center;
-    font-size: 1.6rem;
-  }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 3em;
-    padding: 3em 3em 5em 3em;
-  }
-}
-
