@@ -25,13 +25,15 @@ a {
   font-size: 1.6rem;
 }
 
-p, li {
+p,
+li {
   font-size: 1.6rem;
   margin-bottom: 0.5em;
-
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin-bottom: 0.5em;
 }
 
@@ -69,6 +71,20 @@ h1, h2, h3 {
   background-size: cover;
   background-repeat: no-repeat;
 
+  .hamburger {
+    display: block;
+    padding-left: 3em;
+    padding-top: 3em;
+
+    .bar {
+      display: block;
+      width: 50px;
+      height: 8px;
+      background-color: $black-color;
+      margin-bottom: 0.5em;
+    }
+  }
+
   .hello-coding {
     color: $orange-color;
     font-size: 3rem;
@@ -101,14 +117,14 @@ h1, h2, h3 {
     color: $dark-gray-color;
     font-size: 1.6rem;
   }
-  
 }
 
 /* ################  Section Main Program ################ */
 
 .main-program {
   background-color: $black-color;
-  background: linear-gradient(rgba(39,42,49,0.98), rgba(39,42,49,0.98)), url(../assets/images/pattern_bg.png);
+  background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)),
+    url(../assets/images/pattern_bg.png);
   background-position: center;
   padding-bottom: 3em;
 
@@ -131,7 +147,7 @@ h1, h2, h3 {
   }
 
   .program-box {
-    background: rgba(89,89,89,0.5);
+    background: rgba(89, 89, 89, 0.5);
     padding: 2em;
     display: grid;
     grid-template-columns: 1fr 1fr 3fr;
