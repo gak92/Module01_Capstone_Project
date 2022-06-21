@@ -225,6 +225,7 @@ h1, h2, h3 {
 /* ################  Section Partner ################ */
 .partner {
   background: $black-color;
+  padding-bottom: 3em;
 
   h2 {
     color: #fff;
@@ -232,5 +233,44 @@ h1, h2, h3 {
     padding-top: 2em;
     font-size: 2.4rem;
     font-weight: 400;
+  }
+
+  .partner-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    color: $gray-color;
+    font-weight: normal;
+    font-size: 3rem;
+  }
+}
+
+/* ################  Section Footer ################ */
+.footer {
+  padding-top: 3em;
+  padding-bottom: 3em;
+
+  .footer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    color: $black-color;
+    padding: 2em;
+
+    > * {
+      flex: 1 1 0;
+    }
+
+    .left {
+      color: $black-color;
+      font-size: 2rem;
+    }
+
+    .right {
+      color: $dark-gray-color;
+      font-size: 1.5rem;
+    }
   }
 }

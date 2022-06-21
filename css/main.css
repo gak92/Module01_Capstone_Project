@@ -195,6 +195,7 @@ h1, h2, h3 {
 /* ################  Section Partner ################ */
 .partner {
   background: #272a31;
+  padding-bottom: 3em;
 }
 .partner h2 {
   color: #fff;
@@ -202,6 +203,40 @@ h1, h2, h3 {
   padding-top: 2em;
   font-size: 2.4rem;
   font-weight: 400;
+}
+.partner .partner-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  color: #d3d3d3;
+  font-weight: normal;
+  font-size: 3rem;
+}
+
+/* ################  Section Footer ################ */
+.footer {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+.footer .footer-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  color: #272a31;
+  padding: 2em;
+}
+.footer .footer-box > * {
+  flex: 1 1 0;
+}
+.footer .footer-box .left {
+  color: #272a31;
+  font-size: 2rem;
+}
+.footer .footer-box .right {
+  color: #595959;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=main.css.map */
