@@ -367,6 +367,12 @@ h3 {
         }
       }
     }
+
+    @include desktop-media-query {
+      display: grid;
+      grid-template-columns: auto auto;
+      padding-bottom: 5em;
+    }
   }
 
   .button-box {
@@ -383,13 +389,17 @@ h3 {
       font-size: 2rem;
       border: 1px solid $gray-color;
     }
+
+    @include desktop-media-query {
+      display: none;
+    }
   }
 }
 
 /* ################  Section Partner ################ */
 .partner {
   background: $black-color;
-  padding-bottom: 3em;
+  padding-bottom: 4em;
 
   h2 {
     color: #fff;
@@ -412,8 +422,8 @@ h3 {
 
 /* ################  Section Footer ################ */
 .footer {
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 
   .footer-box {
     display: flex;
@@ -435,6 +445,19 @@ h3 {
     .right {
       color: $dark-gray-color;
       font-size: 1.5rem;
+    }
+  }
+  
+  @include desktop-media-query {
+    .footer-box {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4em;
+
+      .left {
+        display: flex;
+        justify-content: end;
+      }
     }
   }
 }
