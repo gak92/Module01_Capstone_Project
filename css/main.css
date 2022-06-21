@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'COCOGOOSE', sans-serif;
+  font-family: "COCOGOOSE", sans-serif;
 }
 
 ul li {
@@ -97,6 +97,22 @@ h3 {
   border-radius: 1em;
   padding: 1.2em;
 }
+.headline .about-desc {
+  background-color: #fff;
+  color: #595959;
+  border: 2px solid #f7f7f7;
+  padding: 1.2em;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 2em auto;
+  line-height: 2rem;
+}
+.headline .contact-box {
+  text-align: center;
+  margin-top: 5em;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
 .headline h2 {
   color: #595959;
   font-size: 3.5rem;
@@ -110,8 +126,7 @@ h3 {
 /* ################  Section Main Program ################ */
 .main-program {
   background-color: #272a31;
-  background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)),
-    url(../assets/images/pattern_bg.png);
+  background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)), url(../assets/images/pattern_bg.png);
   background-position: center;
   padding-bottom: 3em;
 }
@@ -184,7 +199,7 @@ h3 {
   padding: 1em;
 }
 .speaker .speaker-boxes .speaker-box .text-box {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 .speaker .speaker-boxes .speaker-box .text-box h3 {
   color: #272a31;
@@ -253,6 +268,38 @@ h3 {
 .footer .footer-box .right {
   color: #595959;
   font-size: 1.5rem;
+}
+
+/* ################  Section About Logo ################ */
+.about-logo {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+.about-logo .about-logo-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #272a31;
+}
+.about-logo p {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+/* ################  Section Past Summit ################ */
+.past-summit h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.past-summit p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+.past-summit .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3em;
+  padding: 3em 3em 5em 3em;
 }
 
 /*# sourceMappingURL=main.css.map */
