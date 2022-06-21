@@ -1,6 +1,207 @@
-h1 {
-  color: #ec5242;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ################## HTML Element Classes ################## */
+html {
+  font-size: 62.5%;
+}
+
+body {
   font-family: "COCOGOOSE", sans-serif;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  font-size: 1.6rem;
+}
+
+p, li {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.5em;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.orange-line {
+  border: 1px solid #ec5242;
+  width: 6rem;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.gray-line {
+  border: 1px solid #d3d3d3;
+  width: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  margin: 0.5em 0;
+}
+
+/* ################  Section Headline ################ */
+.headline {
+  height: 95vh;
+  background: url(../assets/images/main_big.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.headline .hello-coding {
+  color: #ec5242;
+  font-size: 3rem;
+  font-weight: 300;
+  padding-top: 5em;
+  display: block;
+}
+.headline h1 {
+  font-size: 4rem;
+  color: #ec5242;
+  font-weight: 700;
+}
+.headline .headline-desc {
+  background-color: #f7f7f7;
+  color: #595959;
+  border: 2px solid #fff;
+  border-radius: 1em;
+  padding: 1.2em;
+}
+.headline h2 {
+  color: #595959;
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+.headline p {
+  color: #595959;
+  font-size: 1.6rem;
+}
+
+/* ################  Section Main Program ################ */
+.main-program {
+  background-color: #272a31;
+  background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)), url(../assets/images/pattern_bg.png);
+  background-position: center;
+  padding-bottom: 3em;
+}
+.main-program .container {
+  margin: 0 auto;
+}
+.main-program h2 {
+  color: #fff;
+  text-align: center;
+  padding-top: 2em;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.main-program .program-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.main-program .program-box {
+  background: rgba(89, 89, 89, 0.5);
+  padding: 2em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  gap: 3em;
+}
+.main-program img {
+  align-self: center;
+}
+.main-program h3 {
+  color: #ec5242;
+  font-size: 2rem;
+  font-weight: normal;
+  align-self: center;
+}
+.main-program p {
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+.main-program .button-box {
+  display: flex;
+  justify-content: center;
+}
+.main-program .btn-join {
+  background: #ec5242;
+  color: white;
+  border: none;
+  margin: 3em auto;
+  padding: 2em 3em;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* ################  Section Featured Speakers ################ */
+.speaker h2 {
+  color: #272a31;
+  text-align: center;
+  padding-top: 2em;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.speaker .speaker-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.speaker .speaker-boxes .speaker-box {
+  display: flex;
+  gap: 3rem;
+  padding: 1em;
+}
+.speaker .speaker-boxes .speaker-box .text-box {
+  font-family: "Lato", sans-serif;
+}
+.speaker .speaker-boxes .speaker-box .text-box h3 {
+  color: #272a31;
+  font-size: 2rem;
+}
+.speaker .speaker-boxes .speaker-box .text-box p {
+  color: #272a31;
+}
+.speaker .button-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 4em;
+  margin-bottom: 3em;
+}
+.speaker .button-box .btn-more {
+  width: 100%;
+  background-color: #fff;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 2rem;
+  border: 1px solid #d3d3d3;
+}
+
+/* ################  Section Partner ################ */
+.partner {
+  background: #272a31;
+}
+.partner h2 {
+  color: #fff;
+  text-align: center;
+  padding-top: 2em;
+  font-size: 2.4rem;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=main.css.map */

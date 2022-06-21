@@ -1,6 +1,236 @@
 @import 'variables';
 
-h1 {
-  color: $orange-color;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ################## HTML Element Classes ################## */
+html {
+  font-size: 62.5%;
+}
+
+body {
   font-family: $cocogoose-font;
+}
+
+ul {
+  li {
+    list-style-type: none;
+  }
+}
+
+a {
+  font-size: 1.6rem;
+}
+
+p, li {
+  font-size: 1.6rem;
+  margin-bottom: 0.5em;
+
+}
+
+h1, h2, h3 {
+  margin-bottom: 0.5em;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.orange-line {
+  border: 1px solid $orange-color;
+  width: 6rem;
+  margin: auto;
+  margin-bottom: 4rem;
+}
+
+.gray-line {
+  border: 1px solid $gray-color;
+  width: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  margin: 0.5em 0;
+}
+
+/* ################  Section Headline ################ */
+
+.headline {
+  height: 95vh;
+  background: url(../assets/images/main_big.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .hello-coding {
+    color: $orange-color;
+    font-size: 3rem;
+    font-weight: 300;
+    padding-top: 5em;
+    display: block;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: $orange-color;
+    font-weight: 700;
+  }
+
+  .headline-desc {
+    background-color: $light-gray-color;
+    color: $dark-gray-color;
+    border: 2px solid #fff;
+    border-radius: 1em;
+    padding: 1.2em;
+  }
+
+  h2 {
+    color: $dark-gray-color;
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+
+  p {
+    color: $dark-gray-color;
+    font-size: 1.6rem;
+  }
+  
+}
+
+/* ################  Section Main Program ################ */
+
+.main-program {
+  background-color: $black-color;
+  background: linear-gradient(rgba(39,42,49,0.98), rgba(39,42,49,0.98)), url(../assets/images/pattern_bg.png);
+  background-position: center;
+  padding-bottom: 3em;
+
+  .container {
+    margin: 0 auto;
+  }
+
+  h2 {
+    color: #fff;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+
+  .program-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .program-box {
+    background: rgba(89,89,89,0.5);
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    gap: 3em;
+  }
+
+  img {
+    align-self: center;
+  }
+
+  h3 {
+    color: $orange-color;
+    font-size: 2rem;
+    font-weight: normal;
+    align-self: center;
+  }
+
+  p {
+    color: #fff;
+    font-weight: normal;
+    font-size: 1.6rem;
+  }
+
+  .button-box {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-join {
+    background: $orange-color;
+    color: white;
+    border: none;
+    margin: 3em auto;
+    padding: 2em 3em;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+/* ################  Section Featured Speakers ################ */
+.speaker {
+  h2 {
+    color: $black-color;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
+
+  .speaker-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .speaker-box {
+      display: flex;
+      gap: 3rem;
+      padding: 1em;
+
+      .text-box {
+        font-family: $lato-font;
+        h3 {
+          color: $black-color;
+          font-size: 2rem;
+        }
+
+        p {
+          color: $black-color;
+        }
+      }
+    }
+  }
+
+  .button-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+    margin-bottom: 3em;
+
+    .btn-more {
+      width: 100%;
+      background-color: #fff;
+      padding-top: 1em;
+      padding-bottom: 1em;
+      font-size: 2rem;
+      border: 1px solid $gray-color;
+    }
+  }
+}
+
+/* ################  Section Partner ################ */
+.partner {
+  background: $black-color;
+
+  h2 {
+    color: #fff;
+    text-align: center;
+    padding-top: 2em;
+    font-size: 2.4rem;
+    font-weight: 400;
+  }
 }
