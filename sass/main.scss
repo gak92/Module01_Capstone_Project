@@ -141,7 +141,8 @@ h3 {
 /* ################  Section Mobile Menu ################ */
 .mobile-menu {
   display: none;
-  transform: translate(-100%);
+  // transform: translate(-100%);
+  transition: all 3s ease-in-out;
 
   &.active {
   display: flex;
@@ -152,7 +153,6 @@ h3 {
   height: 100vh;
   opacity: 0.9;
   transform: translateX(0);
-  transition: all 3s ease-in-out;
 
   .mobile-menu-items {
     display: flex;
@@ -468,10 +468,18 @@ h3 {
       }
     }
 
+    #speaker3, #speaker4, #speaker5, #speaker6 {
+      display: none;
+    }
+
     @include desktop-media-query {
       display: grid;
       grid-template-columns: auto auto;
       padding-bottom: 5em;
+
+      #speaker3, #speaker4, #speaker5, #speaker6 {
+        display: flex;
+      }
     }
   }
 

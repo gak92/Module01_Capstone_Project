@@ -118,7 +118,7 @@ h3 {
 /* ################  Section Mobile Menu ################ */
 .mobile-menu {
   display: none;
-  transform: translate(-100%);
+  transition: all 3s ease-in-out;
 }
 .mobile-menu.active {
   display: flex;
@@ -129,7 +129,6 @@ h3 {
   height: 100vh;
   opacity: 0.9;
   transform: translateX(0);
-  transition: all 3s ease-in-out;
 }
 .mobile-menu.active .mobile-menu-items {
   display: flex;
@@ -380,11 +379,17 @@ h3 {
 .speaker .speaker-boxes .speaker-box .text-box p {
   color: #272a31;
 }
+.speaker .speaker-boxes #speaker3, .speaker .speaker-boxes #speaker4, .speaker .speaker-boxes #speaker5, .speaker .speaker-boxes #speaker6 {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .speaker .speaker-boxes {
     display: grid;
     grid-template-columns: auto auto;
     padding-bottom: 5em;
+  }
+  .speaker .speaker-boxes #speaker3, .speaker .speaker-boxes #speaker4, .speaker .speaker-boxes #speaker5, .speaker .speaker-boxes #speaker6 {
+    display: flex;
   }
 }
 .speaker .button-box {
