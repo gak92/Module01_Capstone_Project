@@ -65,7 +65,7 @@ h3 {
   margin: 0.5em 0;
 }
 
-/* ################  Section Headline ################ */
+/* ################  Section Header ################ */
 .header {
   display: none;
 }
@@ -115,6 +115,36 @@ h3 {
   }
 }
 
+/* ################  Section Mobile Menu ################ */
+.mobile-menu {
+  display: none;
+  transform: translate(-100%);
+}
+.mobile-menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #ec5242;
+  width: 80%;
+  height: 100vh;
+  opacity: 0.9;
+  transform: translateX(0);
+  transition: all 3s ease-in-out;
+}
+.mobile-menu.active .mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  padding-left: 8em;
+  padding-top: 8em;
+}
+.mobile-menu.active .mobile-menu-items a {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 /* ################  Section Headline ################ */
 .headline {
   height: 95vh;
@@ -127,6 +157,7 @@ h3 {
   display: block;
   padding-left: 3em;
   padding-top: 3em;
+  cursor: pointer;
 }
 .headline .hamburger .bar {
   display: block;
@@ -134,6 +165,16 @@ h3 {
   height: 8px;
   background-color: #272a31;
   margin-bottom: 0.5em;
+  transition: all 0.5s ease-in-out;
+}
+.headline .hamburger.active .bar:nth-child(1) {
+  transform: translateY(12px) rotate(45deg);
+}
+.headline .hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.headline .hamburger.active .bar:nth-child(3) {
+  transform: translateY(-12px) rotate(-45deg);
 }
 @media screen and (min-width: 768px) {
   .headline .hamburger {
