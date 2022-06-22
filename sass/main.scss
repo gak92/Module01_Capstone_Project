@@ -84,29 +84,6 @@ h3 {
     display: flex;
     flex-direction: column;
 
-    .top-bar {
-      background: $black-color;
-      min-height: 5vh;
-      display: flex;
-      align-items: center;
-      
-      .container {
-        ul {
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          gap: 2em;
-          
-          li {
-            margin-bottom: 0em;
-            a {
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
-
     .navbar {
       min-height: 8vh;
       display: flex;
@@ -128,14 +105,37 @@ h3 {
           display: flex;
           gap: 6em;
 
-          li{
-            a{
+          li {
+            a {
               color: $black-color;
             }
           }
         }
       }
     }
+    .top-bar {
+      background: $black-color;
+      min-height: 5vh;
+      display: flex;
+      align-items: center;
+
+      .container {
+        ul {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 2em;
+
+          li {
+            margin-bottom: 0;
+            a {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
   }
 }
 
@@ -221,7 +221,8 @@ h3 {
 /* ################  Section Main Program ################ */
 
 .main-program {
-  background: linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)),
+  background:
+   linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)),
     url(../assets/images/pattern_bg.png);
   background-position: center;
   padding-bottom: 3em;
@@ -481,7 +482,7 @@ h3 {
       font-size: 1.5rem;
     }
   }
-  
+
   @include desktop-media-query {
     .footer-box {
       display: grid;
