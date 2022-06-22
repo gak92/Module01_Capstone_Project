@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -65,6 +66,10 @@ h3 {
   margin: 0.5em 0;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 /* ################  Section Header ################ */
 .header {
   display: none;
@@ -94,6 +99,25 @@ h3 {
   }
   .header .navbar .container .nav-items li a {
     color: #272a31;
+    transition: all 0.5s ease-in-out;
+  }
+  .header .navbar .container .nav-items li a:hover {
+    color: #ec5242;
+    transform: scale(1.5);
+  }
+  .header .navbar .container .nav-items li a::after {
+    display: block;
+    content: "";
+    border-bottom: 2px solid #ec5242;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out;
+  }
+  .header .navbar .container .nav-items li a:hover::after {
+    transform: scaleX(1);
+  }
+  .header .navbar .container .nav-items li:last-child {
+    border: 2px solid #ec5242;
+    padding: 0.1em 0.2em;
   }
   .header .top-bar {
     background: #272a31;
@@ -101,17 +125,20 @@ h3 {
     display: flex;
     align-items: center;
   }
-  .header .top-bar .container ul {
+  .header .top-bar ul {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 2em;
   }
-  .header .top-bar .container ul li {
+  .header .top-bar li {
     margin-bottom: 0;
   }
-  .header .top-bar .container ul li a {
+  .header .top-bar a {
     color: #fff;
+  }
+  .header .top-bar a:hover {
+    color: #ec5242;
   }
 }
 
@@ -253,6 +280,10 @@ h3 {
   grid-template-columns: 1fr 1fr 3fr;
   gap: 3em;
 }
+.main-program .program-box:hover {
+  cursor: pointer;
+  border: 2px solid #fff;
+}
 .main-program img {
   align-self: center;
 }
@@ -294,6 +325,29 @@ h3 {
   padding: 2em 3em;
   font-size: 2rem;
   font-weight: 600;
+}
+.main-program .btn-join span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.main-program .btn-join span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-join:hover span {
+  padding-right: 25px;
+}
+
+.btn-join:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 /* ################  Section About Logo ################ */

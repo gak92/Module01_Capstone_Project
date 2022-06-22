@@ -76,6 +76,10 @@ h3 {
   margin: 0.5em 0;
 }
 
+.btn:hover {
+  cursor: pointer;
+}
+
 /* ################  Section Header ################ */
 .header {
   display: none;
@@ -108,32 +112,56 @@ h3 {
           li {
             a {
               color: $black-color;
+              transition: all 0.5s ease-in-out;
+
+              &:hover {
+                color: $orange-color;
+                transform: scale(1.5);
+              }
+
+              &::after {
+                display: block;
+                content: '';
+                border-bottom: 2px solid $orange-color;
+                transform: scaleX(0);
+                transition: all 0.5s ease-in-out;
+              }
+
+              &:hover::after {
+                transform: scaleX(1);
+              }
+            }
+            &:last-child {
+              border: 2px solid $orange-color;
+              padding: 0.1em 0.2em;
             }
           }
         }
       }
     }
+
     .top-bar {
       background: $black-color;
       min-height: 5vh;
       display: flex;
       align-items: center;
 
-      .container {
         ul {
           display: flex;
           justify-content: flex-end;
           align-items: center;
-          gap: 2em;
+          gap: 2em;          
+        }
+        li {
+          margin-bottom: 0;
+        }
+        a {
+          color: #fff;
 
-          li {
-            margin-bottom: 0;
-            a {
-              color: #fff;
-            }
+          &:hover {
+            color: $orange-color;
           }
         }
-      }
     }
   }
 }
@@ -316,6 +344,11 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr;
     gap: 3em;
+
+    &:hover {
+      cursor: pointer;
+      border: 2px solid #fff;
+    }
   }
 
   img {
@@ -366,7 +399,32 @@ h3 {
     padding: 2em 3em;
     font-size: 2rem;
     font-weight: 600;
+
+    span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
   }
+}
+
+.btn-join:hover span {
+  padding-right: 25px;
+}
+
+.btn-join:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 /* ################  Section About Logo ################ */
