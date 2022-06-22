@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: "COCOGOOSE", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 p,
@@ -25,6 +25,7 @@ ul li {
 
 a {
   font-size: 1.6rem;
+  text-decoration: none;
 }
 
 h1,
@@ -52,10 +53,66 @@ h3 {
   margin-bottom: 2rem;
 }
 
+.gray-line-lg {
+  border: 1px solid #d3d3d3;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .btn {
   display: inline-block;
   padding: 0.5em 1.5em;
   margin: 0.5em 0;
+}
+
+/* ################  Section Headline ################ */
+.header {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .header .navbar {
+    min-height: 8vh;
+    display: flex;
+    align-items: center;
+  }
+  .header .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header .navbar .container h1 a {
+    color: #ec5242;
+    font-size: 1.6rem;
+  }
+  .header .navbar .container .nav-items {
+    display: flex;
+    gap: 6em;
+  }
+  .header .navbar .container .nav-items li a {
+    color: #272a31;
+  }
+  .header .top-bar {
+    background: #272a31;
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+  }
+  .header .top-bar .container ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+  }
+  .header .top-bar .container ul li {
+    margin-bottom: 0;
+  }
+  .header .top-bar .container ul li a {
+    color: #fff;
+  }
 }
 
 /* ################  Section Headline ################ */
@@ -78,11 +135,16 @@ h3 {
   background-color: #272a31;
   margin-bottom: 0.5em;
 }
+@media screen and (min-width: 768px) {
+  .headline .hamburger {
+    display: none;
+  }
+}
 .headline .hello-coding {
   color: #ec5242;
   font-size: 3rem;
   font-weight: 300;
-  padding-top: 5em;
+  padding-top: 3em;
   display: block;
 }
 .headline h1 {
@@ -169,6 +231,21 @@ h3 {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  .main-program .program-boxes {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  .main-program .program-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .main-program .program-box p {
+    text-align: center;
+  }
+}
 .main-program .btn-join {
   background: #ec5242;
   color: white;
@@ -207,8 +284,31 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3em;
+  gap: 1em;
   padding: 3em 3em 5em 3em;
+}
+.past-summit .past-summit-img-boxes {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3em;
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+.past-summit .past-summit-img-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.past-summit .past-summit-img-box img {
+  display: block;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .past-summit .past-summit-img-boxes {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
 }
 
 /* ################  Section Featured Speakers ################ */
@@ -239,6 +339,13 @@ h3 {
 .speaker .speaker-boxes .speaker-box .text-box p {
   color: #272a31;
 }
+@media screen and (min-width: 768px) {
+  .speaker .speaker-boxes {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-bottom: 5em;
+  }
+}
 .speaker .button-box {
   display: flex;
   justify-content: center;
@@ -253,11 +360,16 @@ h3 {
   font-size: 2rem;
   border: 1px solid #d3d3d3;
 }
+@media screen and (min-width: 768px) {
+  .speaker .button-box {
+    display: none;
+  }
+}
 
 /* ################  Section Partner ################ */
 .partner {
   background: #272a31;
-  padding-bottom: 3em;
+  padding-bottom: 4em;
 }
 .partner h2 {
   color: #fff;
@@ -278,8 +390,8 @@ h3 {
 
 /* ################  Section Footer ################ */
 .footer {
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
 .footer .footer-box {
   display: flex;
@@ -299,6 +411,17 @@ h3 {
 .footer .footer-box .right {
   color: #595959;
   font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer .footer-box {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4em;
+  }
+  .footer .footer-box .left {
+    display: flex;
+    justify-content: end;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
