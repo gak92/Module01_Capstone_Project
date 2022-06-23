@@ -1,40 +1,37 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Coding Expo
 
-> Description the project.
+> This website is about the event Coding Expo using a design from Behance.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML/CSS3 (SASS)
+- Javascript
+- Linters
+- Visual Studio
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://gak92.github.io/Module01_Capstone_Project/)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- Web Browser
+- Command Line (e.g. Git Bash)
+- Code Editor
 
 ### Setup
+- Make a clone of the repository or download as zip by click on code button
 
 ### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
+- Dont need to install
+- Just extract the folder and open the index.html
 
 
 
@@ -42,15 +39,9 @@ To get a local copy up and running follow these simple example steps.
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: Ghazanfar Ali [@gak92](https://github.com/gak92)
+- LinkedIn: Ghazanfar Ali (https://www.linkedin.com/in/ghazanfar-ali-9a4998a/)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -64,9 +55,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thanks to the designed by [Cindy Shin in Behance](https://www.behance.net/adagio07)
+- Thanks to Microverse for this opportunity
+- Thanks to my Coding Partners, Morning Session, Standup Team and Code Reviewers
+
 
 ## 📝 License
 
