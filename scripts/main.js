@@ -1,49 +1,89 @@
-// Generate Speaker Section Dynamically
+// Create Main Program Section
+const programData = [
+    {
+        image: './assets/images/program_icon_01.png',
+        title: 'Lecture',
+        description: 'Listen to the speaker from various countries about the message of sharing and opening.'
+    },
+    {
+        image: './assets/images/program_icon_02.png',
+        title: 'CE Exhibition',
+        description: 'Appreciate various creations applying CE license artist, organized from Expo Center.'
+    },
+    {
+        image: './assets/images/program_icon_03.png',
+        title: 'Forum',
+        description: 'Have the time to share your thoughts and opinions with experts for each topic.'
+    },
+    {
+        image: './assets/images/program_icon_04.png',
+        title: 'Workshop',
+        description: 'Try Creating your own work using coding expo license rather than just watching.'
+    },
+    {
+        image: './assets/images/program_icon_05.png',
+        title: 'CE Ignite',
+        description: 'Get opportunities to network with CE affiliates around the world, also after the summit.'
+    }
+]
 
+const programBoxContainer = document.querySelector('.program-boxes');
+console.log(programBoxContainer);
+
+programData.forEach((program) => {
+    const programBox = document.createElement('div');
+    programBox.className = 'program-box';
+    programBox.innerHTML = `<img src="${program.image}" alt="${program.title}">
+    <h3>${program.title}</h3>
+    <p>${program.description}</p>`;
+
+    programBoxContainer.appendChild(programBox);
+
+});
+
+// Generate Speaker Section Dynamically
 const speakerData = [
     {
-        image: './assets/images/speaker_01.png',
-        name: 'yohai benkler',
-        designation: 'Professor at Harvard Law School',
-        description: 'Focusing on a collaborative approach in a networked environment, he created the concept of co-production based on sharing, such as open source software and Wikipedia.'
+        image: './assets/images/bill_gates.png',
+        name: 'Bill Gates',
+        designation: 'Former CEO and Co-founder of Microsoft',
+        description: 'Bill Gates is an American business magnate, software developer, investor, author, and philanthropist. He is a co-founder of Microsoft, along with his late childhood friend Paul Allen.'
     },
     {
-        image: './assets/images/speaker_02.png',
-        name: 'Jeon Gil-nam',
-        designation: 'Emeritus Professor, Korea Advanced Institute of Science and Technology (KAIST)',
-        description: 'By developing Asia\'s first Internet protocol network SDN and leading Korea\'s first private line Internet connection in 1990, it ushered in the era of the Internet in earnest.'
+        image: './assets/images/steve_jobs.png',
+        name: 'Steve Jobs',
+        designation: 'Former CEO Apple Inc.',
+        description: 'Steve Jobs is an American entrepreneur, inventor, business magnate, media proprietor, and investor. He was the co-founder, the chairman, and CEO of Apple.'
     },
     {
-        image: './assets/images/speaker_03.png',
-        name: 'Noh So-young',
-        designation: 'Art Center Nabi Director, CC Korea Director',
-        description: 'As the author of <Digital Art Art of Our Time>, he opened \'Art Center Nabi\', Korea\'s first digital art institution in 2000, and is currently serving.'
+        image: './assets/images/elon_musk.png',
+        name: 'Elon Musk',
+        designation: 'Founder, CEO, and Chief Engineer of SpaceX',
+        description: 'Elon Musk is a business magnate and investor. He is the founder, CEO, and Chief Engineer at SpaceX; angel investor, CEO, and Product Architect of Tesla, Inc.'
     },
     {
-        image: './assets/images/speaker_04.png',
-        name: 'Julia Leda',
-        designation: 'Head of the Young Pirates of Europe',
-        description: 'European integration and online youth participation in politics and democracy are major concerns, and a report has been published that will potentially affect the revision of the EU\'s copyright law in July.'
+        image: './assets/images/mark_zuckerberg.png',
+        name: 'Mark Zuckerberg',
+        designation: 'Co-founder and CEO of Meta Platforms',
+        description: 'Zuckerberg attended Harvard University, where he launched Facebook in February 2004 with his roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes.'
     },
     {
-        image: './assets/images/speaker_05.png',
-        name: 'Layla Tretikov',
-        designation: 'Secretary General of the Wikimedia Foundation',
-        description: 'Layla Tretikov is the general secretary of the Wikimedia Foundation, a non-profit organization that runs Wikipedia. Wikipedia is provided free of charge in 290 languages ​​every month to over 100 million people, nearly half of the world\'s population.'
+        image: './assets/images/krishna_arvind.png',
+        name: 'Krishna Arvind',
+        designation: 'Chairman & CEO of IBM',
+        description: 'Arvind Krishna is an Indian-American business executive serving as the Chairman and CEO of IBM. He has been the CEO of IBM since April 2020 and took on the role of Chairman in January 2021.'
     },
     {
-        image: './assets/images/speaker_06.png',
-        name: 'Ryan Merkley',
-        designation: 'Creative Commons CEO, Former Mozilla Foundation COO',
-        description: 'He led open source projects at the Mozilla Foundation, and joined CC as CEO in 2014. He has been active in open movements such as open government and open source.'
+        image: './assets/images/satya_nadella.png',
+        name: 'Satya Nadella',
+        designation: 'Chairman and CEO, Microsoft',
+        description: 'is an Indian American business executive. He is the executive chairman and CEO of Microsoft, succeeding Steve Ballmer in 2014 as CEO.'
     }
 ];
 
 const speakerBoxContainer = document.querySelector('.speaker-boxes');
-console.log(speakerBoxContainer);
 
 speakerData.forEach((speaker, index) => {
-//    console.log("index: ", index); 
    const id = index + 1;
    const speakerBox = document.createElement('div');
    speakerBox.className = 'speaker-box';
@@ -59,7 +99,6 @@ speakerData.forEach((speaker, index) => {
    <p>${speaker.description}</p>
 </div>`;
 
-//    console.log(speakerBox);
     speakerBoxContainer.appendChild(speakerBox);
 
 });
