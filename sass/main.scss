@@ -301,6 +301,11 @@ h3 {
     -moz-text-fill-color: transparent;
     margin-bottom: 0em;
 
+    &.about-pg-h1 {
+      text-align: center;
+      padding-top: 1em;
+    }
+
     @include desktop-media-query {
       font-size: 7rem;
     }
@@ -329,7 +334,7 @@ h3 {
 
   .contact-box {
     text-align: center;
-    margin-top: 5em;
+    margin-top: 4em;
     font-size: 1.6rem;
     line-height: 2rem;
   }
@@ -344,6 +349,10 @@ h3 {
   p {
     color: $dark-gray-color;
     font-size: 1.6rem;
+  }
+
+  #contact-email {
+    text-decoration: underline;
   }
 }
 
@@ -468,6 +477,12 @@ h3 {
   padding-top: 5em;
   padding-bottom: 5em;
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .about-logo-heading {
     text-align: center;
     font-size: 2rem;
@@ -477,6 +492,12 @@ h3 {
   p {
     text-align: center;
     margin-bottom: 2em;
+  }
+
+  .coding-expo-global-summit-logo {
+    border: 1px solid $gray-color;
+    text-align: center;
+    width: 40%;
   }
 }
 
