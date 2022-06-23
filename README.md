@@ -9,7 +9,7 @@
 
 - HTML/CSS3 (SASS)
 - Javascript
-- Linters
+- Linters (Webhint, Eslint, Stylelint)
 - Visual Studio
 
 ## Live Demo (if available)
