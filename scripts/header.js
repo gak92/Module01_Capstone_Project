@@ -1,6 +1,46 @@
+// Create top bar
+const topBar = document.getElementById('top-bar');
+console.log(topBar);
+topBar.innerHTML =`<div class="container">
+<ul>
+    <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
+    <li><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
+    <li><a href="#">English</a></li>
+    <li><a href="#">My Page</a></li>
+    <li><a href="#">Logout</a></li>
+</ul>	
+</div>	`;
+
+// Create Main Menu for Desktop
+const header = document.getElementById('header');
+header.innerHTML = `<navbar class="navbar" id="navbar">
+<div class="container">
+    <h1>
+        <a href="./index.html">Coding Expo</a>
+    </h1>
+    <ul class="nav-items">
+        <li class="nav-item"><a href="./about.html">About</a></li>
+        <li class="nav-item"><a href="#program">Program</a></li>
+        <li class="nav-item"><a href="#speakers">Speakers</a></li>
+        <li class="nav-item"><a href="#partner">Partner</a></li>
+        <li><a href="#">CE Campaign</a></li>
+    </ul>
+</div>
+</navbar>`;
+
+// Create Menu for Mobile
+const mobileMenu = document.querySelector('.mobile-menu');
+
+mobileMenu.innerHTML = `<ul class="mobile-menu-items">
+<li class="mobile-menu-item"><a href="./about.html">About</a></li>
+<li class="mobile-menu-item"><a href="#program">Program</a></li>
+<li class="mobile-menu-item"><a href="#speakers">Speakers</a></li>
+<li class="mobile-menu-item"><a href="#partner">Partner</a></li>
+<li class="mobile-menu-item"><a href="#">CE Campaign</a></li>
+</ul>`;
+
 // Mobile Menu Display Functionality
 const hamburger = document.querySelector('#hamburger');
-const mobileMenu = document.querySelector('.mobile-menu');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
