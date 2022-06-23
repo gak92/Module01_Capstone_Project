@@ -94,7 +94,7 @@ speakerData.forEach((speaker, index) => {
 </div>
 <div class="text-box">
    <h3>${speaker.name}</h3>
-   <p>${speaker.designation}</p>
+   <p class="designation"><em>${speaker.designation}<em></p>
    <hr class="gray-line">
    <p>${speaker.description}</p>
 </div>`;

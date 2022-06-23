@@ -500,12 +500,15 @@ h3 {
 .speaker .speaker-boxes .speaker-box .text-box {
   font-family: "Lato", sans-serif;
 }
-.speaker .speaker-boxes .speaker-box .text-box h3 {
+.speaker .speaker-boxes .speaker-box h3 {
   color: #272a31;
   font-size: 2rem;
 }
-.speaker .speaker-boxes .speaker-box .text-box p {
+.speaker .speaker-boxes .speaker-box p {
   color: #272a31;
+}
+.speaker .speaker-boxes .speaker-box .designation {
+  color: #ec5242;
 }
 .speaker .speaker-boxes #speaker3, .speaker .speaker-boxes #speaker4, .speaker .speaker-boxes #speaker5, .speaker .speaker-boxes #speaker6 {
   display: none;

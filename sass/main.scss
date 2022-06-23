@@ -596,15 +596,19 @@ h3 {
 
       .text-box {
         font-family: $lato-font;
+      }
 
-        h3 {
-          color: $black-color;
-          font-size: 2rem;
-        }
+      h3 {
+        color: $black-color;
+        font-size: 2rem;
+      }
 
-        p {
-          color: $black-color;
-        }
+      p {
+        color: $black-color;
+      }
+
+      .designation {
+        color: $orange-color;
       }
     }
 
