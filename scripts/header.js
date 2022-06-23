@@ -1,13 +1,19 @@
-// Mobile Menu Display
+// Mobile Menu Display Functionality
 const hamburger = document.querySelector('#hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
-    console.log('click on hamburger');
-
     mobileMenu.classList.toggle('active');
-    console.log(mobileMenu);
+});
+
+const mobileMenuItems = document.getElementsByClassName('mobile-menu-item');
+
+Array.from(mobileMenuItems).forEach((item) => {
+    item.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
 });
 
 
