@@ -45,7 +45,7 @@ h3 {
 }
 
 .container {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -76,7 +76,42 @@ h3 {
   margin: 0.5em 0;
 }
 
-/* ################  Section Headline ################ */
+.btn:hover {
+  cursor: pointer;
+}
+
+/* ################  Section Top Bar ################ */
+.top-bar {
+  display: none;
+
+  @include desktop-media-query {
+    background: $black-color;
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2em;
+    }
+
+    li {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #fff;
+
+      &:hover {
+        color: $orange-color;
+      }
+    }
+  }
+}
+
+/* ################  Section Header ################ */
 .header {
   display: none;
 
@@ -88,54 +123,97 @@ h3 {
       min-height: 8vh;
       display: flex;
       align-items: center;
+      box-shadow: 0 3px 10px 0 rgba($color: #000, $alpha: 0.3);
+
+      .logo img {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
 
       .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        h1 {
-          a {
-            color: $orange-color;
-            font-size: 1.6rem;
-          }
-        }
-
         .nav-items {
           display: flex;
+          align-items: center;
           gap: 6em;
 
           li {
             a {
               color: $black-color;
+              transition: all 0.5s ease-in-out;
+
+              &:hover {
+                color: $orange-color;
+                transform: scale(1.5);
+              }
+
+              &::after {
+                display: block;
+                content: '';
+                border-bottom: 2px solid $orange-color;
+                transform: scaleX(0);
+                transition: all 0.5s ease-in-out;
+              }
+
+              &:hover::after {
+                transform: scaleX(1);
+              }
+            }
+
+            &:last-child {
+              border: 3px solid $orange-color;
+              padding: 0.1em 0.3em;
             }
           }
         }
       }
     }
-    .top-bar {
-      background: $black-color;
-      min-height: 5vh;
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
+    }
+  }
+}
+
+/* ################  Section Mobile Menu ################ */
+.mobile-menu {
+  display: none;
+  // transform: translate(-100%);
+  transition: all 3s ease-in-out;
+
+  &.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: $orange-color;
+    width: 80%;
+    height: 100vh;
+    opacity: 0.9;
+    transform: translateX(0);
+
+    .mobile-menu-items {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      gap: 3em;
+      padding-left: 8em;
+      padding-top: 8em;
 
-      .container {
-        ul {
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-          gap: 2em;
-
-          li {
-            margin-bottom: 0;
-            a {
-              color: #fff;
-            }
-          }
-        }
+      a {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 600;
+        cursor: pointer;
       }
     }
-
   }
 }
 
@@ -152,6 +230,7 @@ h3 {
     display: block;
     padding-left: 3em;
     padding-top: 3em;
+    cursor: pointer;
 
     .bar {
       display: block;
@@ -159,6 +238,23 @@ h3 {
       height: 8px;
       background-color: $black-color;
       margin-bottom: 0.5em;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &.active {
+      .bar {
+        &:nth-child(1) {
+          transform: translateY(12px) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(-12px) rotate(-45deg);
+        }
+      }
     }
 
     @include desktop-media-query {
@@ -168,16 +264,38 @@ h3 {
 
   .hello-coding {
     color: $orange-color;
-    font-size: 3rem;
-    font-weight: 300;
-    padding-top: 3em;
+    font-size: 4rem;
+    font-weight: 400;
+    padding-top: 1em;
     display: block;
+    letter-spacing: 0.1rem;
+
+    @include desktop-media-query {
+      padding-top: 2em;
+    }
   }
 
   h1 {
-    font-size: 4rem;
+    font-family: $cocogoose-font;
+    font-size: 5rem;
     color: $orange-color;
-    font-weight: 700;
+    font-weight: 800;
+    background-image: linear-gradient(70deg, #ec5242, #595959, #272a31);
+    // background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // -moz-background-clip: text;
+    // -moz-text-fill-color: transparent;
+    margin-bottom: 0;
+
+    &.about-pg-h1 {
+      text-align: center;
+      padding-top: 1em;
+    }
+
+    @include desktop-media-query {
+      font-size: 7rem;
+    }
   }
 
   .headline-desc {
@@ -186,6 +304,8 @@ h3 {
     border: 2px solid #fff;
     border-radius: 1em;
     padding: 1.2em;
+    max-width: 700px;
+    font-weight: 600;
   }
 
   .about-desc {
@@ -201,7 +321,7 @@ h3 {
 
   .contact-box {
     text-align: center;
-    margin-top: 5em;
+    margin-top: 4em;
     font-size: 1.6rem;
     line-height: 2rem;
   }
@@ -210,11 +330,16 @@ h3 {
     color: $dark-gray-color;
     font-size: 3.5rem;
     font-weight: 500;
+    font-family: $cocogoose-font;
   }
 
   p {
     color: $dark-gray-color;
     font-size: 1.6rem;
+  }
+
+  #contact-email {
+    text-decoration: underline;
   }
 }
 
@@ -222,7 +347,7 @@ h3 {
 
 .main-program {
   background:
-   linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)),
+    linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)),
     url(../assets/images/pattern_bg.png);
   background-position: center;
   padding-bottom: 3em;
@@ -251,6 +376,11 @@ h3 {
     display: grid;
     grid-template-columns: 1fr 1fr 3fr;
     gap: 3em;
+
+    &:hover {
+      cursor: pointer;
+      border: 2px solid #fff;
+    }
   }
 
   img {
@@ -301,13 +431,49 @@ h3 {
     padding: 2em 3em;
     font-size: 2rem;
     font-weight: 600;
+
+    span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    span::after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
   }
+}
+
+.past-summit .past-summit-img-box p span {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.main-program .btn-join:hover span {
+  padding-right: 25px;
+}
+
+.main-program .btn-join:hover span::after {
+  opacity: 1;
+  right: 0;
 }
 
 /* ################  Section About Logo ################ */
 .about-logo {
   padding-top: 5em;
   padding-bottom: 5em;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .about-logo-heading {
     text-align: center;
@@ -318,6 +484,12 @@ h3 {
   p {
     text-align: center;
     margin-bottom: 2em;
+  }
+
+  .coding-expo-global-summit-logo {
+    border: 1px solid $gray-color;
+    text-align: center;
+    width: 40%;
   }
 }
 
@@ -354,10 +526,28 @@ h3 {
     display: flex;
     justify-content: center;
     width: 100%;
+    cursor: pointer;
+    position: relative;
+    background: $orange-color;
+    overflow: hidden;
 
     img {
       display: block;
       max-width: 100%;
+      opacity: 0.5;
+      transition: all 0.5s ease-in-out;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    p {
+      position: absolute;
+      color: #fff;
+      top: 35%;
+      font-size: 2rem;
+      font-weight: 500;
     }
   }
 
@@ -368,6 +558,11 @@ h3 {
     }
   }
 }
+
+// .past-summit .past-summit-img-box p span {
+//   font-size: 4rem;
+//   font-weight: 700;
+// }
 
 /* ################  Section Featured Speakers ################ */
 .speaker {
@@ -391,22 +586,40 @@ h3 {
 
       .text-box {
         font-family: $lato-font;
-
-        h3 {
-          color: $black-color;
-          font-size: 2rem;
-        }
-
-        p {
-          color: $black-color;
-        }
       }
+
+      h3 {
+        color: $black-color;
+        font-size: 2rem;
+      }
+
+      p {
+        color: $black-color;
+      }
+
+      .designation {
+        color: $orange-color;
+      }
+    }
+
+    #speaker3,
+    #speaker4,
+    #speaker5,
+    #speaker6 {
+      display: none;
     }
 
     @include desktop-media-query {
       display: grid;
       grid-template-columns: auto auto;
       padding-bottom: 5em;
+
+      #speaker3,
+      #speaker4,
+      #speaker5,
+      #speaker6 {
+        display: flex;
+      }
     }
   }
 
@@ -434,7 +647,7 @@ h3 {
 /* ################  Section Partner ################ */
 .partner {
   background: $black-color;
-  padding-bottom: 4em;
+  padding-bottom: 7em;
 
   h2 {
     color: #fff;
@@ -448,7 +661,8 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1em;
+    gap: 3em;
+    padding-top: 2em;
     color: $gray-color;
     font-weight: normal;
     font-size: 3rem;
@@ -468,7 +682,7 @@ h3 {
     color: $black-color;
     padding: 2em;
 
-    > * {
+    >* {
       flex: 1 1 0;
     }
 

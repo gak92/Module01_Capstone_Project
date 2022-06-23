@@ -11,63 +11,26 @@
       src="https://kit.fontawesome.com/f5f70a395d.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./scripts/header.js" defer></script>
+    <script src="./scripts/footer.js" defer></script>
     <title>Capstone Project</title>
   </head>
   <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="top-bar">
-        <div class="container">
-          <ul>
-            <li>
-              <a href="https://www.facebook.com"
-                ><i class="fa-brands fa-facebook-f"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.twitter.com"
-                ><i class="fa-brands fa-twitter"></i
-              ></a>
-            </li>
-            <li>
-              <a href="#">English</a>
-            </li>
-            <li>
-              <a href="#">My Page</a>
-            </li>
-            <li>
-              <a href="#">Logout</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <navbar class="navbar">
-        <div class="container">
-          <h1>
-            <a href="./index.html">Coding Expo</a>
-          </h1>
-          <ul class="nav-items">
-            <li><a href="./about.html">About</a></li>
-            <li><a href="#program">Program</a></li>
-            <li><a href="#speakers">Speakers</a></li>
-            <li><a href="#partner">Partner</a></li>
-            <li><a href="#">CE Campaign</a></li>
-          </ul>
-        </div>
-      </navbar>
-    </header>
+    <!-- Top Bar and Main Menu -->
+    <div class="top-bar" id="top-bar"></div>
+    <header class="header" id="header"></header>
+    <navbar class="mobile-menu"></navbar>
 
     <!-- Section Headline -->
-    <section class="headline">
-      <div class="hamburger">
+    <section class="headline" id="headline">
+      <div class="hamburger" id="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
       <div class="container">
-        <span class="hello-coding">"Hello! Coding World"</span>
-        <h1>
+        <!-- <span class="hello-coding">"Hello! Coding World"</span> -->
+        <h1 class="about-pg-h1">
           Coding Expo <br />
           Global Summit <br />
           2022
@@ -100,7 +63,12 @@
         </h2>
         <hr class="orange-line" />
         <p>This logo Coding Expo was created by Ghazanfar Ali on June 22</p>
-        <img src="#" alt="Coding Expo Logo" />
+        <div class="coding-expo-global-summit-logo">
+          <img
+            src="./assets/images/Codin_Expo_Global_Summit_Logo_02.png"
+            alt="Coding Expo Global SummitLogo"
+          />
+        </div>
       </div>
     </section>
 
@@ -118,45 +86,32 @@
         <div class="past-summit-img-boxes">
           <div class="past-summit-img-box">
             <img
-              src="./assets/images/about_2011.png"
+              src="./assets/images/summit_01.jpg"
               alt="Global Summit 2011 Image"
             />
+            <p>
+              <span> 2019 </span> <br /><br />
+              CE Global Summit 2019 in Buenos Aires
+            </p>
           </div>
           <div class="past-summit-img-box">
             <img
-              src="./assets/images/about_2013.png"
+              src="./assets/images/summit_02.jpg"
               alt="Global Summit 2013 Image"
             />
+            <p>
+              <span> 2021 </span> <br /><br />
+              CE Global Summit 2021 in Warsaw
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Partner Section -->
-    <section class="partner">
-      <div class="container">
-        <h2>Partner</h2>
-        <hr class="orange-line" />
-        <div class="partner-boxes">
-          <div class="partner-box">Mozilla</div>
-          <div class="partner-box">Google</div>
-          <div class="partner-box">Naver</div>
-          <div class="partner-box">daumkakao</div>
-          <div class="partner-box">airbnb</div>
-        </div>
-      </div>
-    </section>
+    <section class="partner" id="partner"></section>
 
     <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-box">
-          <div class="left">creative common Korea</div>
-          <div class="right">
-            2022 Creative Common Korea Some Rights Reserved
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer class="footer" id="footer"></footer>
   </body>
 </html>
