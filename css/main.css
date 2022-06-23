@@ -482,7 +482,7 @@ h3 {
 /* ################  Section Partner ################ */
 .partner {
   background: #272a31;
-  padding-bottom: 4em;
+  padding-bottom: 7em;
 }
 .partner h2 {
   color: #fff;
@@ -495,7 +495,8 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1em;
+  gap: 3em;
+  padding-top: 2em;
   color: #d3d3d3;
   font-weight: normal;
   font-size: 3rem;

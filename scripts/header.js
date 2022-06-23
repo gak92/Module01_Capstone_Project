@@ -33,9 +33,9 @@ const mobileMenu = document.querySelector('.mobile-menu');
 
 mobileMenu.innerHTML = `<ul class="mobile-menu-items">
 <li class="mobile-menu-item"><a href="./about.html">About</a></li>
-<li class="mobile-menu-item"><a href="#program">Program</a></li>
-<li class="mobile-menu-item"><a href="#speakers">Speakers</a></li>
-<li class="mobile-menu-item"><a href="#partner">Partner</a></li>
+<li class="mobile-menu-item"><a href="./index.html#program">Program</a></li>
+<li class="mobile-menu-item"><a href="./index.html#speakers">Speakers</a></li>
+<li class="mobile-menu-item"><a href="./index.html#partner">Partner</a></li>
 <li class="mobile-menu-item"><a href="#">CE Campaign</a></li>
 </ul>`;
 
