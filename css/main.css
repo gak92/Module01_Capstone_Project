@@ -111,6 +111,7 @@ h3 {
     min-height: 8vh;
     display: flex;
     align-items: center;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
   }
   .header .navbar .container {
     display: flex;
@@ -147,6 +148,12 @@ h3 {
   .header .navbar .container .nav-items li:last-child {
     border: 3px solid #ec5242;
     padding: 0.1em 0.3em;
+  }
+  .header .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
   }
 }
 

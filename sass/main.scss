@@ -121,6 +121,7 @@ h3 {
       min-height: 8vh;
       display: flex;
       align-items: center;
+      box-shadow: 0 3px 10px 0 rgba($color: #000000, $alpha: 0.3);
 
       .container {
         display: flex;
@@ -168,6 +169,13 @@ h3 {
           }
         }
       }
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #fff;
     }
 
   }
