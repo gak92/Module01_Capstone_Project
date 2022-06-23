@@ -45,7 +45,7 @@ h3 {
 }
 
 .container {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -276,16 +276,33 @@ h3 {
 
   .hello-coding {
     color: $orange-color;
-    font-size: 3rem;
-    font-weight: 300;
-    padding-top: 3em;
+    font-size: 4rem;
+    font-weight: 400;
+    padding-top: 1em;
     display: block;
+    letter-spacing: 0.1rem;
+
+    @include desktop-media-query {
+      padding-top: 2em;
+    }
   }
 
   h1 {
-    font-size: 4rem;
+    font-family: $cocogoose-font;
+    font-size: 5rem;
     color: $orange-color;
-    font-weight: 700;
+    font-weight: 800;
+    background-image: linear-gradient(70deg, #ec5242, #595959, #272a31);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 0em;
+
+    @include desktop-media-query {
+      font-size: 7rem;
+    }
   }
 
   .headline-desc {
@@ -294,6 +311,8 @@ h3 {
     border: 2px solid #fff;
     border-radius: 1em;
     padding: 1.2em;
+    max-width: 700px;
+    font-weight: 600;
   }
 
   .about-desc {
@@ -318,6 +337,7 @@ h3 {
     color: $dark-gray-color;
     font-size: 3.5rem;
     font-weight: 500;
+    font-family: $cocogoose-font;
   }
 
   p {
