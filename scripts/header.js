@@ -1,15 +1,15 @@
 // Create top bar
 const topBar = document.getElementById('top-bar');
-console.log(topBar);
-topBar.innerHTML =`<div class="container">
+
+topBar.innerHTML = `<div class="container">
 <ul>
     <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
     <li><a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
     <li><a href="#">English</a></li>
     <li><a href="#">My Page</a></li>
     <li><a href="#">Logout</a></li>
-</ul>	
-</div>	`;
+</ul>
+</div>`;
 
 // Create Main Menu for Desktop
 const header = document.getElementById('header');
@@ -39,60 +39,59 @@ mobileMenu.innerHTML = `<ul class="mobile-menu-items">
 
 // Functions to stop scrolling when mobile menu open
 function stopScroll() {
-    document.body.style.overflowY = 'hidden';
-  }
-  
-function enableScroll() {
-  document.body.style.overflowY = 'auto';
+  document.body.style.overflowY = 'hidden';
 }
 
-function toggleMobileMenu() {
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    if (hamburger.classList.contains('active')) {
-        stopScroll();
-    } else {
-        enableScroll();
-    }
+function enableScroll() {
+  document.body.style.overflowY = 'auto';
 }
 
 // Mobile Menu Display Functionality
 const hamburger = document.querySelector('#hamburger');
 
+function toggleMobileMenu() {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+  if (hamburger.classList.contains('active')) {
+    stopScroll();
+  } else {
+    enableScroll();
+  }
+}
+
 hamburger.addEventListener('click', () => {
-    // hamburger.classList.toggle('active');
-    // mobileMenu.classList.toggle('active');
-    // if (hamburger.classList.contains('active')) {
-    //     stopScroll();
-    // } else {
-    //     enableScroll();
-    // }
-    toggleMobileMenu();
+  // hamburger.classList.toggle('active');
+  // mobileMenu.classList.toggle('active');
+  // if (hamburger.classList.contains('active')) {
+  //     stopScroll();
+  // } else {
+  //     enableScroll();
+  // }
+  toggleMobileMenu();
 });
 
 const mobileMenuItems = document.getElementsByClassName('mobile-menu-item');
 
 Array.from(mobileMenuItems).forEach((item) => {
-    item.addEventListener('click', () => {
-        // hamburger.classList.toggle('active');
-        // mobileMenu.classList.toggle('active');
-        toggleMobileMenu();
-    });
+  item.addEventListener('click', () => {
+    // hamburger.classList.toggle('active');
+    // mobileMenu.classList.toggle('active');
+    toggleMobileMenu();
+  });
 });
-
 
 // Make the main menu bar fixed when scrolling
 const navBar = document.getElementById('navbar');
-let sticky = navBar.offsetTop;
-
-window.onscroll = function() {
-    stickyNavBar();
-};
+const sticky = navBar.offsetTop;
 
 function stickyNavBar() {
-    if (window.pageYOffset >= sticky) {
-        navBar.classList.add("sticky")
-    } else {
-        navBar.classList.remove("sticky");
-    }
+  if (window.pageYOffset >= sticky) {
+    navBar.classList.add('sticky');
+  } else {
+    navBar.classList.remove('sticky');
+  }
 }
+
+window.onscroll = () => {
+  stickyNavBar();
+};

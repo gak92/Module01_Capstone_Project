@@ -83,32 +83,34 @@ h3 {
 /* ################  Section Top Bar ################ */
 .top-bar {
   display: none;
-  
+
   @include desktop-media-query {
     background: $black-color;
     min-height: 5vh;
     display: flex;
     align-items: center;
 
-      ul {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 2em;          
-      }
-      li {
-        margin-bottom: 0;
-      }
-      a {
-        color: #fff;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2em;
+    }
 
-        &:hover {
-          color: $orange-color;
-        }
+    li {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: #fff;
+
+      &:hover {
+        color: $orange-color;
       }
+    }
   }
-  
 }
+
 /* ################  Section Header ################ */
 .header {
   display: none;
@@ -121,9 +123,9 @@ h3 {
       min-height: 8vh;
       display: flex;
       align-items: center;
-      box-shadow: 0 3px 10px 0 rgba($color: #000000, $alpha: 0.3);
+      box-shadow: 0 3px 10px 0 rgba($color: #000, $alpha: 0.3);
 
-      .logo img{
+      .logo img {
         transition: all 0.2s ease-in-out;
 
         &:hover {
@@ -163,6 +165,7 @@ h3 {
                 transform: scaleX(1);
               }
             }
+
             &:last-child {
               border: 3px solid $orange-color;
               padding: 0.1em 0.3em;
@@ -178,7 +181,6 @@ h3 {
       width: 100%;
       background-color: #fff;
     }
-
   }
 }
 
@@ -189,47 +191,30 @@ h3 {
   transition: all 3s ease-in-out;
 
   &.active {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  background-color: $orange-color;
-  width: 80%;
-  height: 100vh;
-  opacity: 0.9;
-  transform: translateX(0);
-
-  .mobile-menu-items {
     display: flex;
     flex-direction: column;
-    gap: 3em;
-    padding-left: 8em;
-    padding-top: 8em;
+    position: absolute;
+    background-color: $orange-color;
+    width: 80%;
+    height: 100vh;
+    opacity: 0.9;
+    transform: translateX(0);
 
-    a {
-      color: #fff;
-      font-size: 3rem;
-      font-weight: 600;
-      cursor: pointer;
+    .mobile-menu-items {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      padding-left: 8em;
+      padding-top: 8em;
+
+      a {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 600;
+        cursor: pointer;
+      }
     }
-
   }
-  
-  // .navbar {
-  //   display: none;
-  //   .container {
-  //     .nav-items.active {
-  //       display: flex;
-  //       flex-direction: column;
-  //       position: absolute;
-  //       top: 0;
-  //       left: 0;
-  //       width: 80%;
-  //       height: 100vh;
-  //     }
-  //   }
-  // }
-}
-
 }
 
 /* ################  Section Headline ################ */
@@ -261,9 +246,11 @@ h3 {
         &:nth-child(1) {
           transform: translateY(12px) rotate(45deg);
         }
+
         &:nth-child(2) {
           opacity: 0;
         }
+
         &:nth-child(3) {
           transform: translateY(-12px) rotate(-45deg);
         }
@@ -294,12 +281,12 @@ h3 {
     color: $orange-color;
     font-weight: 800;
     background-image: linear-gradient(70deg, #ec5242, #595959, #272a31);
-    background-clip: text;
+    // background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    margin-bottom: 0em;
+    -webkit-text-fill-color: transparent;
+    // -moz-background-clip: text;
+    // -moz-text-fill-color: transparent;
+    margin-bottom: 0;
 
     &.about-pg-h1 {
       text-align: center;
@@ -360,7 +347,7 @@ h3 {
 
 .main-program {
   background:
-   linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)),
+    linear-gradient(rgba(39, 42, 49, 0.98), rgba(39, 42, 49, 0.98)),
     url(../assets/images/pattern_bg.png);
   background-position: center;
   padding-bottom: 3em;
@@ -452,7 +439,7 @@ h3 {
       transition: 0.5s;
     }
 
-    span:after {
+    span::after {
       content: '\00bb';
       position: absolute;
       opacity: 0;
@@ -461,15 +448,20 @@ h3 {
       transition: 0.5s;
     }
   }
+}
 
-  .btn-join:hover span {
-    padding-right: 25px;
-  }
-  
-  .btn-join:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+.past-summit .past-summit-img-box p span {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.main-program .btn-join:hover span {
+  padding-right: 25px;
+}
+
+.main-program .btn-join:hover span::after {
+  opacity: 1;
+  right: 0;
 }
 
 /* ################  Section About Logo ################ */
@@ -538,7 +530,7 @@ h3 {
     position: relative;
     background: $orange-color;
     overflow: hidden;
-    
+
     img {
       display: block;
       max-width: 100%;
@@ -556,14 +548,7 @@ h3 {
       top: 35%;
       font-size: 2rem;
       font-weight: 500;
-
-      span {
-        font: 4rem;
-        font-weight: 700;
-      }
     }
-    
-
   }
 
   @include desktop-media-query {
@@ -573,6 +558,11 @@ h3 {
     }
   }
 }
+
+// .past-summit .past-summit-img-box p span {
+//   font-size: 4rem;
+//   font-weight: 700;
+// }
 
 /* ################  Section Featured Speakers ################ */
 .speaker {
@@ -612,7 +602,10 @@ h3 {
       }
     }
 
-    #speaker3, #speaker4, #speaker5, #speaker6 {
+    #speaker3,
+    #speaker4,
+    #speaker5,
+    #speaker6 {
       display: none;
     }
 
@@ -621,7 +614,10 @@ h3 {
       grid-template-columns: auto auto;
       padding-bottom: 5em;
 
-      #speaker3, #speaker4, #speaker5, #speaker6 {
+      #speaker3,
+      #speaker4,
+      #speaker5,
+      #speaker6 {
         display: flex;
       }
     }
@@ -686,7 +682,7 @@ h3 {
     color: $black-color;
     padding: 2em;
 
-    > * {
+    >* {
       flex: 1 1 0;
     }
 
