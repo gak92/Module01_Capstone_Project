@@ -15,7 +15,7 @@ topBar.innerHTML =`<div class="container">
 const header = document.getElementById('header');
 header.innerHTML = `<navbar class="navbar" id="navbar">
 <div class="container">
-    <a href="./index.html"><img src="./assets/images/coding_expo_logo.png" alt="Coding Expo Logo"></a>
+    <a href="./index.html" class="logo"><img src="./assets/images/coding_expo_logo.png" alt="Coding Expo Logo"></a>
     <ul class="nav-items">
         <li class="nav-item"><a href="./about.html">About</a></li>
         <li class="nav-item"><a href="#program">Program</a></li>

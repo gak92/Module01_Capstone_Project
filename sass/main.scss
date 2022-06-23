@@ -123,17 +123,18 @@ h3 {
       align-items: center;
       box-shadow: 0 3px 10px 0 rgba($color: #000000, $alpha: 0.3);
 
+      .logo img{
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+
       .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        h1 {
-          a {
-            color: $orange-color;
-            font-size: 1.6rem;
-          }
-        }
 
         .nav-items {
           display: flex;

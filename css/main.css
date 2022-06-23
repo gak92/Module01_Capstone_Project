@@ -113,14 +113,16 @@ h3 {
     align-items: center;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.3);
   }
+  .header .navbar .logo img {
+    transition: all 0.2s ease-in-out;
+  }
+  .header .navbar .logo img:hover {
+    transform: scale(1.1);
+  }
   .header .navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .header .navbar .container h1 a {
-    color: #ec5242;
-    font-size: 1.6rem;
   }
   .header .navbar .container .nav-items {
     display: flex;
