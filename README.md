@@ -2,7 +2,7 @@
 
 # Coding Expo
 
-> This website is about the event Coding Expo using a design from Behance.
+> This website is about the event Coding Expo designed using a design from Behance.
 
 
 ## Built With
