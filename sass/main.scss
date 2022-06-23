@@ -534,11 +534,36 @@ h3 {
     display: flex;
     justify-content: center;
     width: 100%;
-
+    cursor: pointer;
+    position: relative;
+    background: $orange-color;
+    overflow: hidden;
+    
     img {
       display: block;
       max-width: 100%;
+      opacity: 0.5;
+      transition: all 0.5s ease-in-out;
     }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    p {
+      position: absolute;
+      color: #fff;
+      top: 35%;
+      font-size: 2rem;
+      font-weight: 500;
+
+      span {
+        font: 4rem;
+        font-weight: 700;
+      }
+    }
+    
+
   }
 
   @include desktop-media-query {

@@ -37,20 +37,46 @@ mobileMenu.innerHTML = `<ul class="mobile-menu-items">
 <li class="mobile-menu-item"><a href="#">CE Campaign</a></li>
 </ul>`;
 
+// Functions to stop scrolling when mobile menu open
+function stopScroll() {
+    document.body.style.overflowY = 'hidden';
+  }
+  
+function enableScroll() {
+  document.body.style.overflowY = 'auto';
+}
+
+function toggleMobileMenu() {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    if (hamburger.classList.contains('active')) {
+        stopScroll();
+    } else {
+        enableScroll();
+    }
+}
+
 // Mobile Menu Display Functionality
 const hamburger = document.querySelector('#hamburger');
 
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
+    // hamburger.classList.toggle('active');
+    // mobileMenu.classList.toggle('active');
+    // if (hamburger.classList.contains('active')) {
+    //     stopScroll();
+    // } else {
+    //     enableScroll();
+    // }
+    toggleMobileMenu();
 });
 
 const mobileMenuItems = document.getElementsByClassName('mobile-menu-item');
 
 Array.from(mobileMenuItems).forEach((item) => {
     item.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
+        // hamburger.classList.toggle('active');
+        // mobileMenu.classList.toggle('active');
+        toggleMobileMenu();
     });
 });
 

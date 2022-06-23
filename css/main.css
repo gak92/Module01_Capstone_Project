@@ -447,10 +447,30 @@ h3 {
   display: flex;
   justify-content: center;
   width: 100%;
+  cursor: pointer;
+  position: relative;
+  background: #ec5242;
+  overflow: hidden;
 }
 .past-summit .past-summit-img-box img {
   display: block;
   max-width: 100%;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+}
+.past-summit .past-summit-img-box img:hover {
+  transform: scale(1.05);
+}
+.past-summit .past-summit-img-box p {
+  position: absolute;
+  color: #fff;
+  top: 35%;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.past-summit .past-summit-img-box p span {
+  font: 4rem;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .past-summit .past-summit-img-boxes {
