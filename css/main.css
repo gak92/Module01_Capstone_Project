@@ -70,6 +70,34 @@ h3 {
   cursor: pointer;
 }
 
+/* ################  Section Top Bar ################ */
+.top-bar {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .top-bar {
+    background: #272a31;
+    min-height: 5vh;
+    display: flex;
+    align-items: center;
+  }
+  .top-bar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2em;
+  }
+  .top-bar li {
+    margin-bottom: 0;
+  }
+  .top-bar a {
+    color: #fff;
+  }
+  .top-bar a:hover {
+    color: #ec5242;
+  }
+}
+
 /* ################  Section Header ################ */
 .header {
   display: none;
@@ -95,6 +123,7 @@ h3 {
   }
   .header .navbar .container .nav-items {
     display: flex;
+    align-items: center;
     gap: 6em;
   }
   .header .navbar .container .nav-items li a {
@@ -116,29 +145,8 @@ h3 {
     transform: scaleX(1);
   }
   .header .navbar .container .nav-items li:last-child {
-    border: 2px solid #ec5242;
-    padding: 0.1em 0.2em;
-  }
-  .header .top-bar {
-    background: #272a31;
-    min-height: 5vh;
-    display: flex;
-    align-items: center;
-  }
-  .header .top-bar ul {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2em;
-  }
-  .header .top-bar li {
-    margin-bottom: 0;
-  }
-  .header .top-bar a {
-    color: #fff;
-  }
-  .header .top-bar a:hover {
-    color: #ec5242;
+    border: 3px solid #ec5242;
+    padding: 0.1em 0.3em;
   }
 }
 
@@ -340,12 +348,10 @@ h3 {
   right: -20px;
   transition: 0.5s;
 }
-
-.btn-join:hover span {
+.main-program .btn-join:hover span {
   padding-right: 25px;
 }
-
-.btn-join:hover span:after {
+.main-program .btn-join:hover span:after {
   opacity: 1;
   right: 0;
 }
