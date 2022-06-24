@@ -60,13 +60,6 @@ function toggleMobileMenu() {
 }
 
 hamburger.addEventListener('click', () => {
-  // hamburger.classList.toggle('active');
-  // mobileMenu.classList.toggle('active');
-  // if (hamburger.classList.contains('active')) {
-  //     stopScroll();
-  // } else {
-  //     enableScroll();
-  // }
   toggleMobileMenu();
 });
 
@@ -74,15 +67,13 @@ const mobileMenuItems = document.getElementsByClassName('mobile-menu-item');
 
 Array.from(mobileMenuItems).forEach((item) => {
   item.addEventListener('click', () => {
-    // hamburger.classList.toggle('active');
-    // mobileMenu.classList.toggle('active');
     toggleMobileMenu();
   });
 });
 
 // Make the main menu bar fixed when scrolling
 const navBar = document.getElementById('navbar');
-const sticky = navBar.offsetTop;
+let sticky = navBar.offsetTop;
 
 function stickyNavBar() {
   if (window.pageYOffset >= sticky) {
@@ -92,6 +83,22 @@ function stickyNavBar() {
   }
 }
 
-window.onscroll = () => {
-  stickyNavBar();
-};
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset >= sticky) {
+    navBar.classList.add('sticky');
+  } 
+  else if (window.pageYOffset < sticky){
+    navBar.classList.remove('sticky');
+  }
+});
+
+const mediaQuery3 = window.matchMedia('(min-width: 768px)');
+
+function isMediaChangedToDesktop3(e) {
+  if (e.matches) {
+    sticky = 41;
+  }
+}
+
+mediaQuery3.addListener(isMediaChangedToDesktop3);
+isMediaChangedToDesktop3(mediaQuery3);
