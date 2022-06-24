@@ -83,13 +83,8 @@ function stickyNavBar() {
   }
 }
 
-window.addEventListener('scroll', function() {
-  if (window.pageYOffset >= sticky) {
-    navBar.classList.add('sticky');
-  } 
-  else if (window.pageYOffset < sticky){
-    navBar.classList.remove('sticky');
-  }
+window.addEventListener('scroll', () => {
+  stickyNavBar();
 });
 
 const mediaQuery3 = window.matchMedia('(min-width: 768px)');
