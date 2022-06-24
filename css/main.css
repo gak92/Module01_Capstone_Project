@@ -256,7 +256,7 @@ h3 {
 }
 @media screen and (min-width: 768px) {
   .headline h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     padding-bottom: 1em;
   }
 }
@@ -274,6 +274,7 @@ h3 {
   .headline .headline-desc {
     font-size: 1.6rem;
     padding: 0;
+    padding-bottom: 1em;
   }
 }
 .headline .about-desc {
@@ -348,8 +349,7 @@ h3 {
 .main-program .program-box {
   background: rgba(89, 89, 89, 0.5);
   padding: 2em;
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
+  display: flex;
   gap: 3em;
 }
 .main-program .program-box:hover {
@@ -358,12 +358,15 @@ h3 {
 }
 .main-program img {
   align-self: center;
+  min-width: 6rem;
 }
 .main-program h3 {
   color: #ec5242;
   font-size: 2rem;
   font-weight: normal;
   align-self: center;
+  min-width: 8rem;
+  text-align: center;
 }
 .main-program p {
   color: #fff;
