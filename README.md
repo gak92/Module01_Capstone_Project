@@ -18,7 +18,9 @@
 
 ## Screenshots
 
-image.png
+![Desktop Image](./assets/images/desktop_img_01.PNG?raw=true "Desktop View")
+![Mobile Image 01](./assets/images/mobile_img_01.PNG?raw=true "Mobile View")
+![Mobile Image 02](./assets/images/mobile_img_02.PNG?raw=true "Mobile View")
 
 
 ## Getting Started
