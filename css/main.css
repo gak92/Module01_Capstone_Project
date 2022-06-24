@@ -254,9 +254,9 @@ h3 {
 
 .headline .hello-coding {
   color: #ec5242;
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 400;
-  padding-top: 1em;
+  padding-top: 1.5em;
   display: block;
   letter-spacing: 0.1rem;
 }
@@ -264,28 +264,32 @@ h3 {
 @media screen and (min-width: 768px) {
   .headline .hello-coding {
     padding-top: 2em;
+    font-size: 4rem;
   }
 }
 
 .headline h1 {
   font-family: "COCOGOOSE", sans-serif;
-  font-size: 5rem;
+  font-size: 4rem;
   color: #ec5242;
   font-weight: 800;
   background-image: linear-gradient(70deg, #ec5242, #595959, #272a31);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0;
+  padding-bottom: 0.5em;
 }
 
 .headline h1.about-pg-h1 {
   text-align: center;
   padding-top: 1em;
+  padding-bottom: 0;
 }
 
 @media screen and (min-width: 768px) {
   .headline h1 {
-    font-size: 7rem;
+    font-size: 6rem;
+    padding-bottom: 1em;
   }
 }
 
@@ -297,31 +301,61 @@ h3 {
   padding: 1.2em;
   max-width: 700px;
   font-weight: 600;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .headline .headline-desc {
+    font-size: 1.6rem;
+    padding: 0;
+    padding-bottom: 1em;
+  }
 }
 
 .headline .about-desc {
   background-color: #fff;
   color: #595959;
   border: 2px solid #f7f7f7;
-  padding: 1.2em;
+  padding: 0.5em;
   text-align: center;
   font-size: 1.6rem;
-  margin: 2em auto;
+  margin: 0 auto;
   line-height: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .headline .about-desc {
+    padding: 1.2em;
+    margin: 2em auto;
+  }
 }
 
 .headline .contact-box {
   text-align: center;
-  margin-top: 4em;
+  margin-top: 0.5em;
   font-size: 1.6rem;
-  line-height: 2rem;
+  line-height: 1.6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .headline .contact-box {
+    margin-top: 3em;
+    line-height: 2rem;
+  }
 }
 
 .headline h2 {
   color: #595959;
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 500;
   font-family: "COCOGOOSE", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .headline h2 {
+    font-size: 3.5rem;
+    margin-bottom: 0;
+  }
 }
 
 .headline p {
@@ -361,8 +395,7 @@ h3 {
 .main-program .program-box {
   background: rgba(89, 89, 89, 0.5);
   padding: 2em;
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
+  display: flex;
   gap: 3em;
 }
 
@@ -373,6 +406,7 @@ h3 {
 
 .main-program img {
   align-self: center;
+  min-width: 6rem;
 }
 
 .main-program h3 {
@@ -380,6 +414,8 @@ h3 {
   font-size: 2rem;
   font-weight: normal;
   align-self: center;
+  min-width: 8rem;
+  text-align: center;
 }
 
 .main-program p {
@@ -480,6 +516,10 @@ h3 {
   width: 40%;
 }
 
+.about-logo .coding-expo-global-summit-logo img {
+  width: 100%;
+}
+
 /* ################  Section Past Summit ################ */
 .past-summit h2 {
   text-align: center;
@@ -533,8 +573,14 @@ h3 {
   position: absolute;
   color: #fff;
   top: 35%;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 500;
+}
+
+@media screen and (min-width: 768px) {
+  .past-summit .past-summit-img-box p {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (min-width: 768px) {

@@ -18,9 +18,9 @@ header.innerHTML = `<navbar class="navbar" id="navbar">
     <a href="./index.html" class="logo"><img src="./assets/images/coding_expo_logo.png" alt="Coding Expo Logo"></a>
     <ul class="nav-items">
         <li class="nav-item"><a href="./about.html">About</a></li>
-        <li class="nav-item"><a href="#program">Program</a></li>
-        <li class="nav-item"><a href="#speakers">Speakers</a></li>
-        <li class="nav-item"><a href="#partner">Partner</a></li>
+        <li class="nav-item"><a href="./index.html#program">Program</a></li>
+        <li class="nav-item"><a href="./index.html#speakers">Speakers</a></li>
+        <li class="nav-item"><a href="./index.html#partner">Partner</a></li>
         <li><a href="#">CE Campaign</a></li>
     </ul>
 </div>
@@ -60,13 +60,6 @@ function toggleMobileMenu() {
 }
 
 hamburger.addEventListener('click', () => {
-  // hamburger.classList.toggle('active');
-  // mobileMenu.classList.toggle('active');
-  // if (hamburger.classList.contains('active')) {
-  //     stopScroll();
-  // } else {
-  //     enableScroll();
-  // }
   toggleMobileMenu();
 });
 
@@ -74,15 +67,13 @@ const mobileMenuItems = document.getElementsByClassName('mobile-menu-item');
 
 Array.from(mobileMenuItems).forEach((item) => {
   item.addEventListener('click', () => {
-    // hamburger.classList.toggle('active');
-    // mobileMenu.classList.toggle('active');
     toggleMobileMenu();
   });
 });
 
 // Make the main menu bar fixed when scrolling
 const navBar = document.getElementById('navbar');
-const sticky = navBar.offsetTop;
+let sticky = navBar.offsetTop;
 
 function stickyNavBar() {
   if (window.pageYOffset >= sticky) {
@@ -92,6 +83,17 @@ function stickyNavBar() {
   }
 }
 
-window.onscroll = () => {
+window.addEventListener('scroll', () => {
   stickyNavBar();
-};
+});
+
+const mediaQuery3 = window.matchMedia('(min-width: 768px)');
+
+function isMediaChangedToDesktop3(e) {
+  if (e.matches) {
+    sticky = 41;
+  }
+}
+
+mediaQuery3.addListener(isMediaChangedToDesktop3);
+isMediaChangedToDesktop3(mediaQuery3);

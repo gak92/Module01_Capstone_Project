@@ -9,12 +9,19 @@
 
 - HTML/CSS3 (SASS)
 - Javascript
-- Linters
+- Linters (Webhint, Eslint, Stylelint)
 - Visual Studio
 
 ## Live Demo (if available)
 
 [Live Demo Link](https://gak92.github.io/Module01_Capstone_Project/)
+[Video Link](https://www.loom.com/share/4ba7e3b306be4dfb9353b35a66a602dc)
+
+## Screenshots
+
+![Desktop Image](./assets/images/desktop_img_01.PNG?raw=true "Desktop View")
+![Mobile Image 01](./assets/images/mobile_img_01.PNG?raw=true "Mobile View")
+![Mobile Image 02](./assets/images/mobile_img_02.PNG?raw=true "Mobile View")
 
 
 ## Getting Started
