@@ -16,6 +16,10 @@
 
 [Live Demo Link](https://gak92.github.io/Module01_Capstone_Project/)
 
+## Screenshots
+
+image.png
+
 
 ## Getting Started
 
