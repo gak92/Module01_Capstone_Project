@@ -15,6 +15,7 @@
 ## Live Demo (if available)
 
 [Live Demo Link](https://gak92.github.io/Module01_Capstone_Project/)
+[Video Link](https://www.loom.com/share/4ba7e3b306be4dfb9353b35a66a602dc)
 
 ## Screenshots
 
