@@ -18,9 +18,9 @@ header.innerHTML = `<navbar class="navbar" id="navbar">
     <a href="./index.html" class="logo"><img src="./assets/images/coding_expo_logo.png" alt="Coding Expo Logo"></a>
     <ul class="nav-items">
         <li class="nav-item"><a href="./about.html">About</a></li>
-        <li class="nav-item"><a href="#program">Program</a></li>
-        <li class="nav-item"><a href="#speakers">Speakers</a></li>
-        <li class="nav-item"><a href="#partner">Partner</a></li>
+        <li class="nav-item"><a href="./index.html#program">Program</a></li>
+        <li class="nav-item"><a href="./index.html#speakers">Speakers</a></li>
+        <li class="nav-item"><a href="./index.html#partner">Partner</a></li>
         <li><a href="#">CE Campaign</a></li>
     </ul>
 </div>
